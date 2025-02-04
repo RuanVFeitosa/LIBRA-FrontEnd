@@ -1,5 +1,6 @@
 import react, { useState } from "react";
-import './Cadastro.css'
+import "../components/Cadastro.css";
+import mascote from "../assets/LOOM.png";
 
 function Cadastro() {
     const [name, setName] = useState("");
@@ -17,40 +18,60 @@ function Cadastro() {
 
     return (
         <>
-            <div className='formulario'>
-                <h2>Cadastro</h2>
-                <p>Já possui cadastro? <span className='login-link'>Faça login</span></p>
+            <div className="container">
+                <div className="wrapper">
+                    <div className='formulario'>
+                        <div className="title">
+                            <h2 className="cadastro">Cadastro</h2>
+                            <p className="login">Já possui cadastro? <span className='login-link'>Faça login</span></p>
+                        </div>
 
-                <label>Nome Completo:</label>
-                <input type='text' placehoder='Insira o seu nome' />
+                        <div className="form">
+                            <label>Nome Completo:</label>
+                            <input type='text' placeholder='Insira o seu nome' />
 
-                <label>E-mail:</label>
-                <input type='text' placehoder='user@email.com' />
+                            <label>E-mail:</label>
+                            <input type='text' placeholder='user@email.com' />
 
-                <label>Senha</label>
-                <input type="password" />
-                <p className="dica-senha">Sua senha precisar ter, no mínimo, 8 caracteres</p>
+                            <label>Senha</label>
+                            <input type="password" placeholder="********" />
+                            <p className="dica-senha">Sua senha precisar ter, no mínimo, 8 caracteres</p>
 
-                <label>Confirme sua senha:</label>
-                <input type="password" />
+                            <label>Confirme sua senha:</label>
+                            <input type="password" placeholder="********" />
 
-                <button className="botao">Próximo</button>
-            </div>
+                            <button className="botao">Próximo</button>
+                        </div>
 
-            {/* BLOCO DE ACESSIBILIDADE */}
-            <div className="acessibilidade">
-                <div className='info'>
-                    <span className='exclamacao'>!</span>
-                    <p>Olá! Eu sou <span className="mascote-nome">Loom</span>, o mascote digital da <span className="plataforma">LIBRA</span>.</p>
-                    <p>Necessita de algum recurso especial? A <span className="plataforma">LIBRA</span> é uma plataforma focada na acessibilidade e inclusão. Clique no botão abaixo para responder ao nosso formulário!</p>
+                    </div>
+
+
+                    {/* BLOCO DE ACESSIBILIDADE */}
+                    <div className="acessibilidade-caixa">
+                        <div className="acessibilidade">
+                            <div className='info'>
+                                <span className="cmd1">
+                                    <span className="cmd2">
+                                        <span className='exclamacao'>!</span>
+                                    </span>
+                                </span>
+                                <p>Olá! Eu sou <span className="mascote-nome">Loom</span>, o mascote digital da <span className="plataforma">LIBRA</span>.</p>
+                                <p>Necessita de algum recurso especial? A <span className="plataforma">LIBRA</span> é uma plataforma focada na acessibilidade e inclusão. Clique no botão abaixo para responder ao nosso formulário!</p>
+                                <div className="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="acessibilidade" />
+                                        <span className="custom-checkbox"></span>
+                                    </label>
+                                    Quero responder o formulário de acessibilidade
+                                </div>
+                            </div>
+                            <img src={mascote} alt="Loom" className="mascote" />
+                        </div>
+                    </div>
                 </div>
 
-                <label className='checkbox'>
-                    <input type='checkbox' /> Quero responder o formulário de acessibilidade
-                </label>
-
-                {/* <img src/> */}
             </div>
+
         </>
     )
 }
