@@ -3,6 +3,12 @@ body {
     background-size: cover;
 }
 
+.libras {
+    position: relative;
+    width: 100px;
+    float: right;
+}
+
 .container {
     display: flex;
     justify-content: center;

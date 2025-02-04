@@ -1,6 +1,7 @@
 import react, { useState } from "react";
 import "../components/Cadastro.css";
 import mascote from "../assets/LOOM.png";
+import libras from "../assets/libra.png";
 
 function Cadastro() {
     const [name, setName] = useState("");
@@ -18,6 +19,7 @@ function Cadastro() {
 
     return (
         <>
+            <img src={libras} alt="libras" className="libras" />
             <div className="container">
                 <div className="wrapper">
                     <div className='formulario'>
