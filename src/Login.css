@@ -1,76 +1,108 @@
 body {
-    background-color: rgb(125, 148, 133);
-    color: white;
-  }
-  
-  .paiForm {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-  }
-  
-  .paiForm h2 {
-    font-size: 40px;
-    text-align: center;
-  }
-  .paiForm span {
-    text-align: center;
-  }
-  
-  .form {
-    background-color: rgb(68, 105, 73);
-    width: 450px;
-    border: 2px solid rgb(68, 105, 73);
-    border-radius: 10px;
-    padding: 50px;
-    text-align: center;
-  }
-  
-  .form span{
-    text-align: center;
-    color: white;
-    width: 100%;
-  }
-  .form a{
-    color: white;
-    font-weight: bold;
-    text-align:  left;
-  }
-  
-  .form button {
-    color: white;
-    background-color: rgb(36, 58, 39);
-    border: none;
-    width: 100%;
-    border-radius: 30px;
-    font-size: 20px;
-    padding: 10px;
-    margin-top: 40px;
-  }
-  .input {
-    position: relative;
-    width: 100%;
-    height: 30px;
-    margin: 50px auto;
-    text-align: center;
-  }
-  
-  .input input {
-    width: 100%;
-    height: 50%;
-    text-align: left;
-    border-radius: 30px;
-    background-color: rgb(133, 197, 133);
-    border: none;
-    color: white;
-    padding: 20px;
-  }
+  background-image: url("assets/fundo.png");
+  background-size: cover;
+  color: white;
+}
 
-  .input label{
-    margin-right: 340px;
-  }
+.paiForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.paiForm h2 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.paiForm span {
+  text-align: center;
+}
+.cabesao {
+  padding-top: 20px;
+  display: flex;
+  width: 100%;
+}
+.form {
+  background-color: #4e6e5f;
+  height: 643.5;
+  width: 450px;
+  border: 2px solid (#476758);
+  border-radius: 50px;
+  padding: 50px;
+  text-align: center;
+}
+
+.form span {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+span a {
+  color: white;
+  font-weight: bold;
+  align-items: flex-end;
+}
+
+.form button {
+  color: white;
+  background-color: #2e3f37;
+  border: none;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 40px;
+}
+.input{
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin: 50px auto;
+  text-align: center;
+  margin-bottom: 90px;
+}
+.input label{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.input input {
+  width: 95%;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #8cc79f;
+  border: none;
+  color: white;
+  padding: 15px;
+  opacity: 0.8;
+  font-size: 18px;
+}
+.input input:focus {
+  opacity: 1.5;
+}
+
+.input label {
+  text-align: left;
+  margin-left: 15px;
+  color: white;
   
-  input::-webkit-input-placeholder {
-    color: white;
-  }
+}
+
+input::-webkit-input-placeholder {
+  color: white;
+}
+
+.input a {
+  display: flex;
+  justify-content: end;
+  color: white;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.input a {
+  text-decoration: none;
+}

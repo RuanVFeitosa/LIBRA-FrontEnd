@@ -1,40 +1,34 @@
 import "./Login.css";
+import fundo from './assets/fundo.png';
 import React, { useState } from "react";
+import PasswordInput from "./PasswordInput";
+
 function Login() {
-  const [password, setPassword] = useState("");
-  const [passwordVisible, setPasswordVisible] = useState("");
-
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
-
-  const handlePasswordChange = (event) => {
-    setPassword(event.target.value);
-  };
-
   return (
     <body>
       <div>
         <div className="cabesao">
-          <h1>ICONE DO LIBRA</h1>
+          <h1>botão do contraste</h1>
         </div>
 
         <div className="paiForm">
           <form className="form">
             <h2>Login</h2>
-            <span >
-              Ainda não tem login?<a href="#">Cadastre-se</a>
+            <span>
+              Ainda não tem login? <a href="#">Cadastre-se</a>
             </span>
 
             <div className="input">
               <label>Email:</label>
-              <input type="email" placeholder="email"></input>
+              <input type="email" placeholder="user@email.com" />
             </div>
 
             <div className="input">
               <label>Senha:</label>
-              <input type="password" placeholder="*****"></input>
-              <a href="#">Esqueci minha senha</a>
+              <input type="password" placeholder="******" ></input>
+              <div>
+                <a href="#">Esqueci minha senha</a>
+              </div>
             </div>
 
             <button>Próximo</button>
