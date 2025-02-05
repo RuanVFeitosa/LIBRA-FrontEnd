@@ -1,5 +1,5 @@
 body {
-    background: url('../assets/fundo.png');
+    background: url('../fundo.png');
     background-size: cover;
 }
 
@@ -233,7 +233,7 @@ body {
     position: relative;
     display: flex;
     width: 400px;
-    bottom: 30px;
+    bottom: 10px;
 
 }
 
@@ -315,6 +315,6 @@ body {
     }
 
     .mascote {
-        width: 250px;
+        width: 220px;
     }
 }

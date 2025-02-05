@@ -1,13 +1,18 @@
 import react, { useState } from "react";
-import "../components/Cadastro.css";
+import { useNavigate } from "react-router-dom"; // Importa a função para navegar
+
+import "../assets/css/Cadastro.css";
 import mascote from "../assets/LOOM.png";
 import libras from "../assets/libra.png";
+import VLibras from "@djpfs/react-vlibras";
 
 function Cadastro() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ConfirmPassword, setConfirmPassword] = useState("");
+
+     const navigate = useNavigate(); // Hook para navegação
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,9 +22,14 @@ function Cadastro() {
         console.log('Confirmar Senha: ', ConfirmPassword);
     };
 
+    // Função para mudar de página ao clicar no botão
+    const handleNext = () => {
+        navigate("/outra"); // Define a próxima rota
+    };
+
     return (
         <>
-            <img src={libras} alt="libras" className="libras" />
+            {/* <img src={libras} alt="libras" className="libras" /> */}
             <div className="container">
                 <div className="wrapper">
                     <div className='formulario'>
@@ -42,7 +52,8 @@ function Cadastro() {
                             <label>Confirme sua senha:</label>
                             <input type="password" placeholder="********" />
 
-                            <button className="botao">Próximo</button>
+                        <button className="botao" onClick={handleNext}>Próximo</button>
+
                         </div>
 
                     </div>
@@ -78,4 +89,4 @@ function Cadastro() {
     )
 }
 
-export default Cadastro
+export default Cadastro;

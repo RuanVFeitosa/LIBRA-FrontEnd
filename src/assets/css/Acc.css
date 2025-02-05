@@ -1,0 +1,54 @@
+.form-acc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.text {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.options-text {
+    font-size: 15px;
+    margin-top: 0;
+}
+
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none; /* Esconde a checkbox padrão */
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Torna redondo */
+    border: 2px solid #fff; /* Cor da borda */
+    background-color: transparent;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.checkbox input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: white; /* Cor quando marcado */
+    border: 2px solid white; /* Mantém borda da cor */
+}
