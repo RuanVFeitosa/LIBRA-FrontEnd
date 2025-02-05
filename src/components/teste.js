@@ -3,6 +3,17 @@ import fundo from './assets/fundo.png';
 import React, { useState } from "react";
 import PasswordInput from "./PasswordInput";
 
+  const legenda = document.querySelector("#legenda");
+  const campoSenha = document.querySelector("#campoSenha");
+  const botaoMostrarSenha = document.querySelector("#botaoMostrarSenha");
+
+    const [showPassword, setShowPassword] = useState(false);
+    
+      const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+      };
+    
+
 function Login() {
   return (
     <body>
@@ -25,7 +36,9 @@ function Login() {
 
             <div className="input">
               <label>Senha:</label>
-              <input type="password" placeholder="******" ></input>
+              <input type="password" id="campoSenha" name="campoSenha" placeholder="******" ></input>
+              <label for="botaoMostrar" className="legenda">Mostrar</label>
+              <input type="checkbox" id="botaoMostrarSenha"/>
               <div>
                 <a href="#">Esqueci minha senha</a>
               </div>
@@ -40,5 +53,14 @@ function Login() {
     </body>
   );
 }
+
+botaoMostrarSenha.addEventListener("change", function(){
+  const estadoAtualDoCampoDeSenha = campoSenha.getAttribute("type") === "password" ? "text" : "password"
+
+  campoSenha.setAttribute("type",estadoAtualDoCampoDeSenha);
+
+
+  legenda.innerHTML = estadoAtualDoCampoDeSenha === "password" ? "Mostrar" : "Ocultar";
+});
 
 export default Login;
