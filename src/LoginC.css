@@ -1,0 +1,117 @@
+body {
+  background-image: url("assets/loginContraste.png");
+  background-size: cover;
+  color: white;
+}
+  .paiForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  
+  .paiForm h2 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .paiForm span {
+    text-align: center;
+  }
+  .cabesao {
+    padding-top: 20px;
+    width: 98%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+  }
+  .cabesao button{
+    border-radius: 10px;
+  }
+  
+  
+  .form {
+    background-color: #000000;
+    height: 643.5;
+    width: 450px;
+    border: white 3px solid;
+    border-radius: 50px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .form span {
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+  span a {
+    color: white;
+    font-weight: bold;
+    align-items: flex-end;
+  }
+  
+  .form button {
+    color: white;
+    background-color: #000000;
+    border: 3px solid white;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  .input{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 50px auto;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+  .input label{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .input input {
+    width: 95%;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #000000;
+    border: white 3px solid;
+    color: white;
+    padding: 15px;
+    opacity: 0.8;
+    font-size: 18px;
+  }
+  .input input:focus {
+    opacity: 1.5;
+  }
+  
+  .input label {
+    text-align: left;
+    margin-left: 15px;
+    color: white;
+    
+  }
+  
+  input::-webkit-input-placeholder {
+    color: white;
+  }
+  
+  .input a {
+    display: flex;
+    justify-content: end;
+    color: white;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+  .input a {
+    text-decoration: none;
+  }
+  

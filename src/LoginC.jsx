@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./Login.css";
-import { ToggleSwitch } from "./components/ToggleSwitch";
-function Login() {
+import "./LoginC.css";
+function LoginC() {
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -18,17 +17,16 @@ function Login() {
 
   return (
     <div className="login-container">
-
     <div className="cabesao">
-
-        <ToggleSwitch onClick={handleCheck}/>
-        <h1>{isChecked ? "apertando " : "Não apertado"}</h1>
+      <label></label>
+       <button>{isChecked ? "apertando " : "Não apertado"} </button>
+       <label onClick={handleCheck} htmlFor="">auto contraste</label>
     </div>
     
 
     <div className="paiForm">
       <form className="form">
-        <h2>Login</h2>
+        <h2>Login CONTRASTE</h2>
         <span>
           Ainda não tem login? <a href="#">Cadastre-se</a>
         </span>
@@ -68,8 +66,4 @@ function Login() {
   );
 }
 
-export default Login;
-
-interface StyleProps{
-  isDarkMode: boolean
-}
+export default LoginC;
