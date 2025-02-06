@@ -115,3 +115,32 @@ input::-webkit-input-placeholder {
 .input a {
   text-decoration: none;
 }
+
+
+.teste{
+  background-color: #3b5147;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 1rem;
+  border: 1px solid #3b5147;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: 0.25s;
+}
+
+.contraste{
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.botazinho{
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: red;
+  left: 5%;
+  cursor: pointer;
+}

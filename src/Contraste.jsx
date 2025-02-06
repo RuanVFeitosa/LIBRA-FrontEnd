@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./LoginC.css";
-function LoginC() {
+function Contraste() {
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
@@ -66,4 +66,4 @@ function LoginC() {
   );
 }
 
-export default LoginC;
+export default Contraste;
