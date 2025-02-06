@@ -60,24 +60,24 @@ function Login() {
 
           <div className="input">
             <label>Senha:</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="campoSenha"
-              name="campoSenha"
-              placeholder="******"
-            />
-            <label htmlFor="botaoMostrarSenha" className="legenda">
-              {showPassword ? "Ocultar" : "Mostrar"}
-            </label>
-            <input
-              type="checkbox"
-              id="botaoMostrarSenha"
-              onChange={togglePasswordVisibility}
-            />
+            <div className="password-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="campoSenha"
+                name="campoSenha"
+                placeholder="******"
+              />
+              <input
+                type="checkbox"
+                id="botaoMostrarSenha"
+                onChange={togglePasswordVisibility}
+              />
+            </div>
             <div>
               <a href="#">Esqueci minha senha</a>
             </div>
           </div>
+
 
           <button>Próximo</button>
         </form>
