@@ -1,27 +1,33 @@
+/*TOPO DA PAGINA*/
+
 body {
   background-image: url("assets/fundo.png");
   background-size: cover;
   color: white;
 }
 
-.paiForm {
+.header button {
+  border-radius: 10px;
+}
+
+.Container-Form {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
 }
 
-.paiForm h2 {
+.Container-Form h2 {
   font-size: 50px;
   text-align: center;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 20px;
 }
-.paiForm span {
+.Container-Form span {
   text-align: center;
 }
-.cabesao {
+.header {
   padding-top: 20px;
   width: 98%;
   display: flex;
@@ -29,12 +35,10 @@ body {
   justify-content: end;
   flex-direction: column;
 }
-.cabesao button{
-  border-radius: 10px;
-}
 
+/*AREA DO FORM*/
 
-.form {
+.Login-Form {
   background-color: #4e6e5f;
   height: 643.5;
   width: 450px;
@@ -45,7 +49,7 @@ body {
   margin-top: 40px;
 }
 
-.form span {
+.Login-Form span {
   text-align: center;
   color: white;
   width: 100%;
@@ -56,7 +60,7 @@ span a {
   align-items: flex-end;
 }
 
-.form button {
+.Login-Form button {
   color: white;
   background-color: #2e3f37;
   border: none;
@@ -66,7 +70,9 @@ span a {
   padding: 15px;
   margin-top: 40px;
 }
-.input{
+
+/*AREA QUE ENTRA OS DADOS*/
+.input {
   position: relative;
   width: 100%;
   height: 30px;
@@ -74,7 +80,7 @@ span a {
   text-align: center;
   margin-bottom: 90px;
 }
-.input label{
+.input label {
   display: block;
   margin-bottom: 10px;
   font-size: 18px;
@@ -98,7 +104,6 @@ span a {
   text-align: left;
   margin-left: 15px;
   color: white;
-  
 }
 
 input::-webkit-input-placeholder {
@@ -116,31 +121,37 @@ input::-webkit-input-placeholder {
   text-decoration: none;
 }
 
+/*FUNÇÔES DA PAGINA*/
 
-.teste{
+.areaC {
   background-color: #3b5147;
   width: 5rem;
   height: 2rem;
   display: flex;
   border-radius: 1rem;
-  border: 1px solid #3b5147;
+  border: 3px solid #3b5147;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: 0.25s;
 }
-
-.contraste{
+.buttonContraste {
   height: 100%;
   width: 100%;
   opacity: 0;
+  transition: 0.25ms;
 }
-.botazinho{
+
+.buttonContraste:checked + span {
+  left: 55%;
+  background-color: rgb(255, 255, 255);
+}
+
+.bolinha {
   position: absolute;
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: red;
+  background-color: rgb(255, 255, 255);
   left: 5%;
   cursor: pointer;
 }

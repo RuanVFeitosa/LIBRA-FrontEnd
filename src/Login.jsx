@@ -1,46 +1,53 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Contraste from "./Contraste";
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    console.log("Redirecionando para /contraste"); // Verifique no console
+    navigate("./Contraste");
+  };
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isChecked, setChecked] = React.useState(false);
+  console.log("aperto", isChecked);
 
-  const toggleTheme = () => {
-    setIsDarkMode((prevState) => !prevState);
+  const handleCheck = () => {
+    setChecked((prevState) => !prevState);
   };
-  const themeStyles = {
-    backgroundImage: isDarkMode
-      ? 'url("assets/loginContraste.png")'
-      : 'url("assets/fundo.png")',
-    backgroundSize: "cover",
-    color: isDarkMode ? "white" : "black",
-  };
+
   const ToggleSwitch = ({ onClick, isChecked }) => (
-    <label className="teste">
+    <label className="areaC">
       <input
-        className="contraste"
+        className="buttonContraste"
         type="checkbox"
         checked={isChecked}
         onChange={onClick}
       />
-      <span className="botazinho"></span>
+      <span className="bolinha"></span>
     </label>
   );
 
   return (
-    <div className="login-container" style={themeStyles}>
-      <div className="cabesao">
-        <h1>{isDarkMode ? "Dark Mode" : "Light Mode"}</h1>
-        <ToggleSwitch onClick={toggleTheme} isChecked={isDarkMode} />
+    <div className="login-container">
+      <div className="header">
+        <ToggleSwitch onClick={handleNext} />
+        <button onClick={handleNext}>auto contraste</button>
+        <button>{isChecked ? "apertando " : "Não apertado"} </button>
+        <label onClick={handleCheck} htmlFor="">
+          auto contraste
+        </label>
       </div>
 
-      <div className="paiForm">
-        <form className="form">
+      <div className="Container-Form">
+        <form className="Login-Form">
           <h2>Login</h2>
           <span>
             Ainda não tem login? <a href="#">Cadastre-se</a>
@@ -75,8 +82,6 @@ function Login() {
           <button>Próximo</button>
         </form>
       </div>
-
-      <h1>Icone de libras</h1>
     </div>
   );
 }

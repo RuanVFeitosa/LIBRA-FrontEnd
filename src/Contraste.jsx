@@ -1,68 +1,82 @@
 import React, { useState } from "react";
-import "./LoginC.css";
+import { useNavigate } from "react-router-dom";
+import "./Contraste.css";
+import Login from "./Login";
 function Contraste() {
+  const navigate = useNavigate();
+
+  const handleNext = () => {
+    navigate("/Login");
+  };
 
   const [showPassword, setShowPassword] = useState(false);
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
-  }
+  };
 
-  const [isChecked, setChecked] = React.useState(false)
+  const [isChecked, setChecked] = React.useState(false);
+  console.log("aperto", isChecked);
 
-  console.log("aperto", isChecked)
+  const handleCheck = () => {
+    setChecked((prevState) => !prevState);
+  };
 
-  const handleCheck = () =>{
-    setChecked((prevState) =>  !prevState)
-  }
+  const ToggleSwitch = ({ onClick, isChecked }) => (
+    <label className="butaoArea">
+      <input
+        className="botaoC"
+        type="checkbox"
+        checked={isChecked}
+        onChange={onClick}
+      />
+      <span className="butatao"></span>
+    </label>
+  );
 
   return (
-    <div className="login-container">
-    <div className="cabesao">
-      <label></label>
-       <button>{isChecked ? "apertando " : "Não apertado"} </button>
-       <label onClick={handleCheck} htmlFor="">auto contraste</label>
-    </div>
-    
+    <div className="Contraste-container">
+      <div className="header-contraste">
+        <ToggleSwitch onClick={handleNext} />
+        <button>{isChecked ? "apertando " : "Não apertado"} </button>
+        <label onClick={handleCheck} htmlFor="">
+          auto contraste
+        </label>
+      </div>
 
-    <div className="paiForm">
-      <form className="form">
-        <h2>Login CONTRASTE</h2>
-        <span>
-          Ainda não tem login? <a href="#">Cadastre-se</a>
-        </span>
+      <div className="ContainerC-Form">
+        <form className="Contraste-Form">
+          <h2>Login</h2>
+          <span>
+            Ainda não tem login? <a href="#">Cadastre-se</a>
+          </span>
 
-        <div className="input">
-          <label>Email:</label>
-          <input type="email" placeholder="user@email.com" />
-        </div>
-
-        <div className="input">
-          <label>Senha:</label>
-          <input
-            type={showPassword ? "text" : "password"}
-            id="campoSenha"
-            name="campoSenha"
-            placeholder="******"
-          />
-          <label htmlFor="botaoMostrarSenha" className="legenda">
-            {showPassword ? "Ocultar" : "Mostrar"}
-          </label>
-          <input
-            type="checkbox"
-            id="botaoMostrarSenha"
-            onChange={togglePasswordVisibility}
-          />
-          <div>
-            <a href="#">Esqueci minha senha</a>
+          <div className="Cinput">
+            <label>Email:</label>
+            <input type="email" placeholder="user@email.com" />
           </div>
-        </div>
 
-        <button>Próximo</button>
-      </form>
+          <div className="Cinput">
+            <label>Senha:</label>
+            <input
+              type={showPassword ? "text" : "password"}
+              id="campoSenha"
+              name="campoSenha"
+              placeholder="******"
+            />
+            <input
+              type="checkbox"
+              id="botaoMostrarSenha"
+              onChange={togglePasswordVisibility}
+            />
+            <div>
+              <a href="#">Esqueci minha senha</a>
+            </div>
+          </div>
+
+          <button>Próximo</button>
+        </form>
+      </div>
     </div>
-
-    <h1>Icone de libras</h1>
-  </div>
   );
 }
 
