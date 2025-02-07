@@ -40,7 +40,7 @@ function Cadastro() {
 
                         <div className="form">
                             <label>Nome Completo:</label>
-                            <input type='text' placeholder='Insira o seu nome' />
+                            <input type='text' name="name" placeholder='Insira o seu nome' />
 
                             <label>E-mail:</label>
                             <input type='text' placeholder='user@email.com' />
@@ -52,7 +52,7 @@ function Cadastro() {
                             <label>Confirme sua senha:</label>
                             <input type="password" placeholder="********" />
 
-                        <button className="botao" onClick={handleNext}>Próximo</button>
+                        <button className="botao" onClick={handleSubmit}>Próximo</button>
 
                         </div>
 

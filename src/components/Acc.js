@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Importa a função para navegar
+
 import '../assets/css/Acc.css';
 import circle from '../assets/g-circle.png';
 
@@ -7,6 +9,13 @@ function Acc() {
 
     const handleCheckboxChange = (event) => {
         setShowTextarea(event.target.checked);
+    };
+
+    const navigate = useNavigate(); // Hook para navegação
+
+
+    const handleNext = () => {
+        navigate("/tecnologia"); // Define a próxima rota
     };
 
     return (
@@ -69,7 +78,7 @@ function Acc() {
                             <p className="text-acc">Lamentamos pelo transtorno se nosso site ainda não estiver totalmente adaptado para atender às suas necessidades de acessibilidade. Estamos constantemente trabalhando para melhorar a experiência de todos os usuários. Caso tenha dificuldades para navegar, entre em contato conosco para que possamos ajudar da melhor forma possível.</p>
                         </>
                     )}
-                    <button className="botao-acc">Próximo</button>
+                    <button className="botao-acc" onClick={handleNext}>Próximo</button>
                 </div>
 
             </div>

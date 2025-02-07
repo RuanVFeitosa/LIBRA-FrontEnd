@@ -1,0 +1,148 @@
+/* Centraliza a caixa na tela */
+.confirm-caixa {
+    position: absolute; /* Garante que a posição seja em relação à tela */
+    top: 50%; /* Move o topo da caixa para o meio */
+    left: 50%; /* Move a lateral da caixa para o meio */
+    transform: translate(-50%, -50%); /* Ajusta para que o centro da caixa fique exatamente no meio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+   
+}
+
+/* Mantém a estrutura da caixa */
+.confirm {
+    width: 852.4px;
+    height: 230px;
+    background-color: #476758;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.info-confirm {
+    font-size: 20px;
+    position: relative;
+}
+
+.cmd1-confirm {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #3b5147;
+    /* border: 1px solid white; */
+}
+
+.cmd2-confirm {
+    border-radius: 20px;
+    padding: 2px;
+    border: 2px solid white;
+    background-color: #3b5147;
+}
+
+.exclamacao-confirm {
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: none;
+}
+
+
+.LOOM {
+    position: absolute; /* Garante que a posição seja em relação à tela */
+    top: 100%; /* Move o topo da caixa para o meio */
+    left: -10%; /* Move a lateral da caixa para o meio */
+    transform: translate(-50%, -50%); /* Ajusta para que o centro da caixa fique exatamente no meio */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 580px;
+
+}
+
+/* ---------------------------------------------- Responsividade --------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .acessibilidade {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 10px;
+    }
+    
+    .wrapper {
+        gap: 10px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .form input {
+        width: 100%;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .acessibilidade {
+        width: 100%;
+    }
+
+    /* .mascote{} */
+}
+
+@media screen and (max-width: 480px) {
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .login {
+        font-size: 10px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input {
+        font-size: 14px;
+    }
+
+    .dica-senha {
+        font-size: 10px;
+    }
+
+    .botao {
+        font-size: 14px;
+    }
+
+    .acessibilidade {
+        height: auto;
+        padding: 15px;
+    }
+
+    .mascote {
+        width: 220px;
+    }
+}
