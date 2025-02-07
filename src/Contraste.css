@@ -8,155 +8,158 @@ body {
   padding-top: 20px;
   width: 98%;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
   flex-direction: column;
 }
-.header-contraste button{
+
+.header-contraste button {
   border-radius: 10px;
   border: none;
   background-color: black;
   color: white;
 }
 
+.ContainerC-Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
 
-  .ContainerC-Form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-  }
-  
-  .ContainerC-Form h2 {
-    font-size: 50px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 0px;
-    margin-bottom: 20px;
-  }
-  .ContainerC-Form span {
-    text-align: center;
-  }
+.ContainerC-Form h2 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
 
-  
-  .Contraste-Form {
-    background-color: #000000;
-    height: 643.5;
-    width: 450px;
-    border: white 3px solid;
-    border-radius: 50px;
-    padding: 50px;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  .Contraste-Form span {
-    text-align: center;
-    color: white;
-    width: 100%;
-  }
-  span a {
-    color: white;
-    font-weight: bold;
-    align-items: flex-end;
-  }
-  
-  .Contraste-Form button {
-    color: white;
-    background-color: #000000;
-    border: 3px solid white;
-    width: 100%;
-    border-radius: 30px;
-    font-size: 20px;
-    padding: 15px;
-    margin-top: 40px;
-  }
+.ContainerC-Form span {
+  text-align: center;
+}
 
-  .Cinput{
-    position: relative;
-    width: 100%;
-    height: 30px;
-    margin: 50px auto;
-    text-align: center;
-    margin-bottom: 90px;
-  }
-  .Cinput label{
-    display: block;
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-  .Cinput input {
-    width: 95%;
-    text-align: left;
-    border-radius: 20px;
-    background-color: #000000;
-    border: white 3px solid;
-    color: white;
-    padding: 15px;
-    opacity: 0.8;
-    font-size: 18px;
-  }
-  .Cinput input:focus {
-    opacity: 1.5;
-  }
-  
-  .Cinput label {
-    text-align: left;
-    margin-left: 15px;
-    color: white;
-    
-  }
-  
-  
-  .Cinput input::-webkit-input-placeholder {
-    color: white;
-  }
-  
-  .Cinput a {
-    display: flex;
-    justify-content: end;
-    color: white;
-    margin-top: 5px;
-    padding-top: 5px;
-  }
-  .Cinput a {
-    text-decoration: none;
-  }
+.Contraste-Form {
+  background-color: #000000;
+  height: 643.5px; 
+  width: 450px;
+  border: 3px solid white;
+  border-radius: 50px;
+  padding: 50px;
+  text-align: center;
+  margin-top: 40px;
+}
 
-  .Cinput input #MostrarSenha{
-    background-color: blue;
-  }
-  
+.Contraste-Form span {
+  text-align: center;
+  color: white;
+  width: 100%;
+}
 
-  .butaoArea{
-    background-color: #ffffff;
-    width: 5rem;
-    height: 2rem;
-    display: flex;
-    border-radius: 1rem;
-    border: 3px solid #ffffff;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  .botaoC{
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: 0.25ms;
-  }
+span a {
+  color: white;
+  font-weight: bold;
+  align-items: flex-end;
+}
 
-  .botaoC:checked + span{
-    left: 55%;
-    background-color: black;
-  }
+.Contraste-Form button {
+  color: white;
+  background-color: #000000;
+  border: 3px solid white;
+  width: 100%;
+  border-radius: 30px;
+  font-size: 20px;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+.Cinput {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  margin: 50px auto;
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+.Cinput label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.Cinput input {
+  width: 95%;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #000000;
+  border: 3px solid white;
+  color: white;
+  padding: 15px;
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+.Cinput input:focus {
+  opacity: 1; /* Corrigido a opacidade para 1, pois não pode ser maior que 1 */
+}
+
+.Cinput label {
+  text-align: left;
+  margin-left: 15px;
+  color: white;
+}
+
+.Cinput input::-webkit-input-placeholder {
+  color: white;
+}
+
+.Cinput a {
+  display: flex;
+  justify-content: end;
+  color: white;
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+.Cinput a {
+  text-decoration: none;
+}
+
+.Cinput input #MostrarSenha {
   
-  .butatao{
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 1rem;
-    background-color: rgb(0, 0, 0);
-    left: 5%;
-    cursor: pointer;
-  }
+}
+
+.butaoArea {
+  background-color: #ffffff;
+  width: 5rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 1rem;
+  border: 3px solid #ffffff;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.botaoC {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.25ms;
+}
+
+.botaoC:checked + span {
+  left: 55%;
+  background-color: black;
+}
+
+.butatao {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(0, 0, 0);
+  left: 5%;
+  cursor: pointer;
+}
