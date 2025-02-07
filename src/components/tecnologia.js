@@ -14,7 +14,7 @@ function Tecnologia() {
 
     return (
         <>
-            <div className="circle">
+            <div className="circle-tec">
                 <img src={circle} alt="circle" />
             </div>
 
