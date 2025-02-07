@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Contraste.css"; // Certifique-se de que o nome do arquivo está correto
+import "./Contraste.css"
 import { LuEye, LuEyeOff } from "react-icons/lu";
 
-const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
+const ToggleSwitch = ({ isChecked, onChange}) => (
   <label className="areaC">
     <input
       className="buttonContraste"
@@ -11,7 +11,6 @@ const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
       checked={isChecked}
       onChange={(e) => {
         onChange(e);
-        handleNext();
       }}
     />
     <span className="bolinha"></span>
@@ -19,14 +18,10 @@ const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
 );
 
 function Contraste() {
-  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleNext = () => {
-    console.log("Redirecionando para /Login");
-    navigate("/login");
-  };
+
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -36,72 +31,85 @@ function Contraste() {
     setIsChecked(e.target.checked);
   };
 
+  const navigate = useNavigate();
+
+  const handleNormal = () => {
+    navigate("/"); // Navega de volta para a versão normal
+  };
+
   return (
-    <div className="Contraste-container">
-      <div className="header-contraste">
-        <div>
-          <ToggleSwitch
-            isChecked={isChecked}
-            onChange={handleToggleChange}
-            handleNext={handleNext}
-          />
-        </div>
-        <button className="auto-contraste-button" onClick={handleNext}>
-          auto contraste
-        </button>
-      </div>
-
-      <div className="ContainerC-Form">
-        <form className="Contraste-Form">
-          <h2>Login</h2>
-          <span>
-            Ainda não tem login? <a href="#">Cadastre-se</a>
-          </span>
-
-          <div className="Cinput">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="user@email.com"
+    <body className="corpoContraste">
+      <div className="Contraste-container">
+        <div className="header-contraste">
+          <div>
+            <ToggleSwitch
+              isChecked={isChecked}
+              onChange={handleToggleChange}
+              onClick={handleNormal}
             />
           </div>
+          <button className="auto-contraste-button" onClick={handleNormal}>
+            auto contraste
+          </button>
+        </div>
 
-          <div className="Cinput">
-            <label htmlFor="campoSenha">Senha:</label>
-            <div className="password-container" style={{ position: "relative" }}>
+        <div className="ContainerC-Form">
+          <form className="Contraste-Form">
+            <h2>Login</h2>
+            <span>
+              Ainda não tem login? <a href="#">Cadastre-se</a>
+            </span>
+
+            <div className="Cinput">
+              <label htmlFor="email">Email:</label>
               <input
-                type={showPassword ? "text" : "password"}
-                id="campoSenha"
-                name="campoSenha"
-                placeholder="******"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="user@email.com"
               />
-              <div
-                onClick={togglePasswordVisibility}
-                style={{
-                  display: "inline-block",
-                  fontSize: "24px",
-                  cursor: "pointer",
-                  position: "absolute",
-                  right: "10px",
-                  top: "50%",
-                  transform: "translateY(-50%)",
-                }}
-                role="button"
-                tabIndex="0"
-                aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
-              >
-                {showPassword ? <LuEyeOff /> : <LuEye />}
-              </div>
             </div>
-            <a href="#">Esqueci minha senha</a>
-          </div>
 
-          <button type="button">Próximo</button>
-        </form>
+            <div className="Cinput">
+              <label htmlFor="campoSenha">Senha:</label>
+              <div
+                className="password-container"
+                style={{ position: "relative" }}
+              >
+                <input
+                  type={showPassword ? "text" : "password"}
+                  id="campoSenha"
+                  name="campoSenha"
+                  placeholder="******"
+                />
+                <div
+                  onClick={togglePasswordVisibility}
+                  style={{
+                    display: "inline-block",
+                    fontSize: "24px",
+                    cursor: "pointer",
+                    position: "absolute",
+                    right: "10px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                  }}
+                  role="button"
+                  tabIndex="0"
+                  aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
+                >
+                  {showPassword ? <LuEyeOff /> : <LuEye />}
+                </div>
+              </div>
+              <a href="#">Esqueci minha senha</a>
+            </div>
+
+            <button type="submit" style={{ cursor: "pointer" }}>
+              Próximo
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </body>
   );
 }
 

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Login.css";
 import { LuEye, LuEyeOff } from "react-icons/lu";
+import "./Login.css";
 
-const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
+const ToggleSwitch = ({ isChecked, onChange}) => (
   <label className="areaC">
     <input
       className="buttonContraste"
@@ -11,7 +11,6 @@ const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
       checked={isChecked}
       onChange={(e) => {
         onChange(e); // Alterna o estado do checkbox
-        handleNext();
       }}
     />
     <span className="bolinha"></span>
@@ -19,14 +18,9 @@ const ToggleSwitch = ({ isChecked, onChange, handleNext }) => (
 );
 
 function Login() {
-  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
-  const handleNext = () => {
-    console.log("Redirecionando para /contraste");
-    navigate("/contraste");
-  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -36,17 +30,26 @@ function Login() {
     setIsChecked(e.target.checked);
   };
 
+
+  const navigate = useNavigate();
+
+  const handleContrast = () => {
+    navigate("/contrast"); // Navega para a versão de alto contraste
+  };
+
   return (
     <div className="login-container">
       <div className="header">
         <div>
           <ToggleSwitch
+            onClick={handleContrast}
             isChecked={isChecked}
             onChange={handleToggleChange}
-            handleNext={handleNext}
           />
         </div>
-        <button style={{ color: 'white' }} onClick={handleNext}><a href="#">auto contraste</a></button>
+        <button onClick={handleContrast} style={{ color: "white", borderBottom: '1px out-line white' }} >
+          Auto contraste
+        </button>
       </div>
 
       <div className="Container-Form">
@@ -58,12 +61,17 @@ function Login() {
 
           <div className="input">
             <label htmlFor="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="user@email.com" />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="user@email.com"
+            />
           </div>
 
           <div className="input">
             <label htmlFor="campoSenha">Senha:</label>
-            <div className="password-container" style={{ position: 'relative' }}>
+            <div className="password-container" style={{ position: "relative" }}>
               <input
                 type={showPassword ? "text" : "password"}
                 id="campoSenha"
@@ -71,27 +79,27 @@ function Login() {
                 placeholder="******"
               />
               <div
+                className="password-toggle"
                 onClick={togglePasswordVisibility}
                 style={{
-                  display: 'inline-block',
-                  fontSize: '24px',
-                  cursor: 'pointer',
-                  position: 'absolute',
-                  right: '10px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  cursor: "pointer",
                 }}
-                role="button"
-                tabIndex="0"
-                aria-label={showPassword ? "Ocultar senha" : "Mostrar senha"}
               >
                 {showPassword ? <LuEyeOff /> : <LuEye />}
               </div>
             </div>
+         
+         
             <a href="#">Esqueci minha senha</a>
           </div>
 
-          <button type="button" style={{cursor:'pointer'}}>Próximo</button>
+          <button type="submit" style={{ cursor: "pointer" }}>
+            Próximo
+          </button>
         </form>
       </div>
     </div>
