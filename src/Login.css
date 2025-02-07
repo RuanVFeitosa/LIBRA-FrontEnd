@@ -8,8 +8,12 @@ body {
 
 .header button {
   border-radius: 10px;
+  border: none;
+  background: none;
 }
-
+.header a{
+  color: white;
+}
 .Container-Form {
   display: flex;
   justify-content: center;
@@ -156,22 +160,34 @@ input::-webkit-input-placeholder {
   cursor: pointer;
 }
 
-
+.senha{
+  margin: 0px;
+  width: 0px;
+}
 
 
 .password-container {
   display: flex;
   align-items: center;
-  gap: 5px; /* Reduz o espaço entre o campo de senha e o checkbox */
+  width: 100%;
+  background-color: #8cc79f;
+  text-align: left;
+  border-radius: 20px;
+  background-color: #8cc79f;
+  border: none;
+  color: white;
+  opacity: 0.8;
+  font-size: 18px;
 }
 
-input[type="checkbox"] {
-  margin: 0; /* Remove a margem padrão do checkbox */
-  transform: scale(0.9); /* Reduz o tamanho do checkbox */
+.password-container input[type="password"] {
+  padding-left: 10px;
+  width: 90%;
+  border: none;
 }
 
-.show-password-label {
-  cursor: pointer;
-  white-space: nowrap;
-  font-size: 14px; /* Reduz o tamanho da fonte do texto "Mostrar/Ocultar" */
-}
+  .password-container input[type="checkbox"] {
+    width: 13px;
+    padding-left: 10px;
+
+  }
