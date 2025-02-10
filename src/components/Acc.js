@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"; // Importa a função para naveg
 
 import '../assets/css/Acc.css';
 import circle from '../assets/g-circle.png';
+import Checkbox from "./Checkbox";
 
 function Acc() {
     const [showTextarea, setShowTextarea] = useState(false);
@@ -32,45 +33,16 @@ function Acc() {
                         <p className="options-text">(Marque todas as opções que se aplicam) </p>
                     </div>
 
-                    <div className="checkbox-options">
-                        <label>
-                            <input type="checkbox" />
-                            <span className="custom-options"></span>
-                        </label>
-                        Deficiência visual (Baixa visão, cegueira total, daltonismo etc.).
-                    </div>
+                {
 
-                    <div className="checkbox-options">
-                        <label>
-                            <input type="checkbox" />
-                            <span className="custom-options"></span>
-                        </label>
-                        Deficiência auditiva (Surdez parcial ou Surdez total).
-                    </div>
+                    // Fazer req na api na parte de disableds, pegar as disableds que veio
+                    // e passar os checkbox
 
-                    <div className="checkbox-options">
-                        <label>
-                            <input type="checkbox" />
-                            <span className="custom-options"></span>
-                        </label>
-                        Dificuldades motoras (Dificuldade em utilizar o mouse/teclado. Necessidade de dispositivos de apoio (ex.: trackball, teclados adaptados).
-                    </div>
+                }
 
-                    <div className="checkbox-options">
-                        <label>
-                            <input type="checkbox" />
-                            <span className="custom-options"></span>
-                        </label>
-                        Deficiência psicológica ou cognitiva. (Dificuldade de concentração, Dislexia, Déficit de atenção (TDA ou TDAH), autismo ou TEA (Transtorno do Espectro Autista), transtorno de memória (ex.: dificuldades para reter ou recuperar informações).
-                    </div>
+                    <Checkbox details = {"asdasdasjlSDAFJHKL"} />
 
-                    <div className="checkbox-options">
-                        <label>
-                            <input type="checkbox" onChange={handleCheckboxChange} checked={showTextarea} />
-                            <span className="custom-options"></span>
-                        </label>
-                        Outras? Descreva abaixo.
-                    </div>
+                    {/* // Criar um componente */}
 
                     {showTextarea && (
                         <>

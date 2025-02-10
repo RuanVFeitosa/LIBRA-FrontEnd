@@ -7,10 +7,27 @@ import libras from "../assets/libra.png";
 import VLibras from "@djpfs/react-vlibras";
 
 function Cadastro() {
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [ConfirmPassword, setConfirmPassword] = useState("");
+
+    const handleNameChange = (e) => {
+        setName(e.target.value);  // Atualiza o estado com o valor do input
+      };
+
+      const handleEmailChange = (e) => {
+        setEmail(e.target.value);  // Atualiza o estado com o valor do input
+      };
+
+      const handlePasswordChange = (e) => {
+        setPassword(e.target.value);  // Atualiza o estado com o valor do input
+      };
+
+      const handleCPasswordChange = (e) => {
+        setConfirmPassword(e.target.value);  // Atualiza o estado com o valor do input
+      };
 
      const navigate = useNavigate(); // Hook para navegação
 
@@ -40,17 +57,17 @@ function Cadastro() {
 
                         <div className="form">
                             <label>Nome Completo:</label>
-                            <input type='text' name="name" placeholder='Insira o seu nome' />
+                            <input type='text' name="name" placeholder='Insira o seu nome' value={name} onChange={handleNameChange} />
 
                             <label>E-mail:</label>
-                            <input type='text' placeholder='user@email.com' />
+                            <input type='text' placeholder='user@email.com' value={email} onChange={handleEmailChange}/>
 
                             <label>Senha</label>
-                            <input type="password" placeholder="********" />
+                            <input type="password" placeholder="********"  value={password} onChange={handlePasswordChange} />
                             <p className="dica-senha">Sua senha precisar ter, no mínimo, 8 caracteres</p>
 
                             <label>Confirme sua senha:</label>
-                            <input type="password" placeholder="********" />
+                            <input type="password" placeholder="********" value={ConfirmPassword} onChange={handleCPasswordChange}/>
 
                         <button className="botao" onClick={handleSubmit}>Próximo</button>
 
