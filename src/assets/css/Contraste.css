@@ -1,73 +1,70 @@
-/*TOPO DA PAGINA*/
-
-body {
-  background-image: url("assets/fundo.png");
+.corpoContraste {
   background-size: cover;
   color: white;
 }
 
-.header button {
+.header-contraste {
+  padding-top: 20px;
+  width: 98%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.header-contraste button {
   border-radius: 10px;
   border: none;
-  background: none;
-}
-.header a {
+  background-color: black;
   color: white;
 }
-.Container-Form {
+
+.ContainerC-Form {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 50vh;
 }
 
-.Container-Form h2 {
+.ContainerC-Form h2 {
   font-size: 50px;
   text-align: center;
   font-weight: bold;
   margin-top: 0px;
   margin-bottom: 20px;
 }
-.Container-Form span {
+
+.ContainerC-Form span {
   text-align: center;
 }
-.header {
-  padding-top: 20px;
-  width: 98%;
-  display: flex;
-  align-items: end;
-  justify-content: end;
-  flex-direction: column;
-}
 
-/*AREA DO FORM*/
-
-.Login-Form {
-  background-color: #4e6e5f;
-  height: 643.5;
+.Contraste-Form {
+  background-color: #000000;
+  height: 643.5px;
   width: 450px;
-  border: 2px solid (#476758);
+  border: 3px solid white;
   border-radius: 50px;
   padding: 50px;
   text-align: center;
   margin-top: 40px;
 }
 
-.Login-Form span {
+.Contraste-Form span {
   text-align: center;
   color: white;
   width: 100%;
 }
+
 span a {
   color: white;
   font-weight: bold;
   align-items: flex-end;
 }
 
-.Login-Form button {
+.Contraste-Form button {
   color: white;
-  background-color: #2e3f37;
-  border: none;
+  background-color: #000000;
+  border: 3px solid white;
   width: 100%;
   border-radius: 30px;
   font-size: 20px;
@@ -75,8 +72,7 @@ span a {
   margin-top: 40px;
 }
 
-/*AREA QUE ENTRA OS DADOS*/
-.input {
+.Cinput {
   position: relative;
   width: 100%;
   height: 30px;
@@ -84,85 +80,83 @@ span a {
   text-align: center;
   margin-bottom: 90px;
 }
-.input label {
+
+.Cinput label {
   display: block;
   margin-bottom: 10px;
   font-size: 18px;
 }
-.input input {
+
+.Cinput input {
   width: 95%;
   text-align: left;
   border-radius: 20px;
-  background-color: #8cc79f;
-  border: none;
+  background-color: black;
+  border: 2px solid white;
   color: white;
   padding: 15px;
   opacity: 0.8;
   font-size: 18px;
 }
-.input input:focus {
+
+.Cinput input:focus {
   opacity: 1.5;
 }
 
-.input label {
+.Cinput label {
   text-align: left;
   margin-left: 15px;
   color: white;
 }
 
-input::-webkit-input-placeholder {
+.Cinput input::-webkit-input-placeholder {
   color: white;
 }
 
-.input a {
+.Cinput a {
   display: flex;
   justify-content: end;
   color: white;
   margin-top: 5px;
   padding-top: 5px;
 }
-.input a {
+
+.Cinput a {
   text-decoration: none;
 }
 
-/*FUNÇÔES DA PAGINA*/
-
-.areaC {
-  background-color: #3b5147;
+.butaoArea {
+  background-color: #ffffff;
   width: 5rem;
   height: 2rem;
   display: flex;
   border-radius: 1rem;
-  border: 3px solid #3b5147;
+  border: 3px solid #ffffff;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-.buttonContraste {
+
+.botaoC {
   height: 100%;
   width: 100%;
   opacity: 0;
   transition: 0.25ms;
 }
 
-.buttonContraste:checked + span {
+.botaoC:checked + span {
   left: 55%;
-  background-color: rgb(255, 255, 255);
+  background-color: black;
 }
 
-.bolinha {
+.butatao {
   position: absolute;
   width: 2rem;
   height: 2rem;
   border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   left: 5%;
   cursor: pointer;
-}
-
-.senha {
-  margin: 0px;
-  width: 0px;
 }
 
 .password-container {

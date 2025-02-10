@@ -1,7 +1,7 @@
 import React from "react";
 import {  BrowserRouter as Router,  Route,  Routes} from "react-router-dom"; // Mude 'Switch' para 'Routes'
-import Login from "./Login";
-import Contraste from "./Contraste";
+import Login from "./components/Login";
+import Contraste from "./components/Contraste";
 
 function App() {
   return (

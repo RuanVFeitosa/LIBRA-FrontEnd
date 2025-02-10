@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Contraste.css"
+import "../assets/css/Contraste.css";
+
+
 import { LuEye, LuEyeOff } from "react-icons/lu";
 
 const ToggleSwitch = ({ isChecked, onChange}) => (
