@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import "../assets/css/Login.css";
 
 
 
-function LoginPage() {
+function Admin() {
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
-
-  const[email, setEmail] = useState("");
-  const[password, setPassword] = useState("");
-  
 
   const ToggleSwitch = ({ isChecked, onChange }) => (
     <label className="areaC"
@@ -35,90 +31,6 @@ function LoginPage() {
       }}></span>
     </label>
   );
-
-  const [avisoLogin, setAvisoLogiu] = useState(false);
-  const [msgErro, setMsgErro] = useState("");
-
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);  // Atualiza o estado com o valor do input
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);  // Atualiza o estado com o valor do input
-  };
-
-  
-  
-  const handleSubmit =  async (e) =>{
-    e.preventDefault();
-    
-    // Setando o useState do dataUser
-    const dataUser = {
-      email: email,
-      password: password
-    }
-    
-
-
-    // Fazer a req para a api
-    try {
-
-      // Fazendo a requisição para a API
-      const response = await fetch("http://10.92.198.61:8080/auth/login", {
-        'body' : JSON.stringify(dataUser),
-        "method" : "POST",
-        "headers" : {"Content-Type" : "Application/json"}
-      })
-      
-      // Convertendo o retorno para json
-      const responseJson = await response.json();
-
-      // Se a req tiver tido sucesso
-      if(responseJson.success){
-
-        // Limpar mensagem de erro
-        setMsgErro("");
-
-
-        // Adicionar o token no Session/LocalStorage
-        localStorage.setItem('token', responseJson.data.token);
-
-        // Direcionar para a home
-        console.log(localStorage.getItem("token"));
-
-        // Mensagem generica
-        alert("Sendo encaminhado para a home...")
-      }else {
-        console.log(responseJson);
-
-        if(responseJson.error){
-          return setMsgErro(responseJson.error.details[0].message);
-        }
-
-        if(responseJson.errors){
-          return setMsgErro(responseJson.errors[0].message);
-        }
-        
-        // console.log(responseJson.error.details[0].message)
-
-      }
-      
-    } catch (error) {
-      console.log(error);
-      
-    }
-    
-    // 10.92.198.61
-
-    console.log(dataUser);
-
-    
-    // setAvisoLogiu('login realizado com sucesso!')
-    // console.log("login realizado")
-  }
-
-  
-
 
   const toggleContrast = () => {
     setHighContrast(!highContrast);
@@ -163,7 +75,7 @@ function LoginPage() {
       </div>
 
       <div className="Container-Form">
-        <form onSubmit={handleSubmit} className="Login-Form"
+        <form className="Login-Form"
           style={{
             backgroundColor: highContrast ? "#000000" : "#4e6e5f",
             border: highContrast ? '3px solid white' : "2px solid #476758",
@@ -180,8 +92,6 @@ function LoginPage() {
               type="email"
               id="email"
               name="email"
-              onChange={handleEmailChange}
-              value={email}
               placeholder="user@email.com"
               style={{
                 backgroundColor: highContrast ? "black" : "#8cc79f",
@@ -197,14 +107,14 @@ function LoginPage() {
               style={{
                 position: "relative",
                 backgroundColor: highContrast ? "black" : "",
+                border: highContrast ? "1px solid white" : "",
+                color: highContrast ? "white" : "white",
               }}>
               <input
                 type={showPassword ? "text" : "password"}
                 id="campoSenha"
                 name="campoSenha"
                 placeholder="******"
-                onChange={handlePasswordChange}
-                value={password}
                 style={{
                   backgroundColor: highContrast ? "black" : "#8cc79f",
                   color: highContrast ? "white" : "white",
@@ -242,13 +152,10 @@ function LoginPage() {
           >
             Próximo
           </button>
-
-            <p>{msgErro}</p>
         </form>
-        {avisoLogin && <p>{avisoLogin}</p>}
       </div>
     </div>
   );
 }
 
-export default LoginPage;
+export default Admin;
