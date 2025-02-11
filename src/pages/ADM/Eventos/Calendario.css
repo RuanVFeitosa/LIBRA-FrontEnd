@@ -1,0 +1,22 @@
+.calendario {
+    text-align: center;
+  }
+  
+  .dias {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  
+  .dia {
+    background: #75846c;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .dia:hover {
+    background: #5c6f56;
+  }
+  

@@ -1,0 +1,62 @@
+.eventos-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.calendario-section {
+  background: #f3f3f3;
+  padding: 15px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+.eventos-dia {
+  margin-top: 20px;
+}
+
+.evento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.evento img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.form-section {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 65%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #75846c;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5c6f56;
+}

@@ -24,7 +24,7 @@ function Cadastro() {
 
     // Função para mudar de página ao clicar no botão
     const handleNext = () => {
-        navigate("/outra"); // Define a próxima rota
+        navigate("/adm"); // Define a próxima rota
     };
 
     return (
@@ -52,7 +52,7 @@ function Cadastro() {
                             <label>Confirme sua senha:</label>
                             <input type="password" placeholder="********" />
 
-                        <button className="botao" onClick={handleSubmit}>Próximo</button>
+                        <button className="botao" onClick={handleNext}>Próximo</button>
 
                         </div>
 

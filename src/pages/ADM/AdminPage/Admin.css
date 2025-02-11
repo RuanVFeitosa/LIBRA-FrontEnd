@@ -1,0 +1,18 @@
+.admin-container {
+    background-color: #75846c;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: auto;
+  }
+  
+  .admin-content {
+    flex-grow: 1;
+    padding: 50px;
+    margin: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: white;
+    border-radius: 30px;
+  }
+  

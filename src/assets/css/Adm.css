@@ -1,0 +1,31 @@
+.App {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  header {
+    margin-bottom: 20px;
+  }
+  
+  .quick-access ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .quick-access li {
+    margin: 5px 0;
+  }
+  
+  .latest-books table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .latest-books th, .latest-books td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .latest-books th {
+    background-color: #f2f2f2;
+  }
