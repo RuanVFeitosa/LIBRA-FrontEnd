@@ -1,0 +1,57 @@
+body{
+    color: black;
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #9daf9e;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.sidebar ul li.selected {
+    background-color: #ffffff;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.Name {
+    display: flex;
+    padding-left: 50px;
+}
+
+h2 {
+    font-weight: bold;
+    text-align: center;
+}
+img{
+    height: 78px;
+    width: 78px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.perfil{
+    display: flex;
+}
+

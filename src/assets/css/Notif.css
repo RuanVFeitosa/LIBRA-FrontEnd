@@ -1,0 +1,9 @@
+.Div-form{
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #627961;
+}
+
+.lateral{
+    display: flex;
+}

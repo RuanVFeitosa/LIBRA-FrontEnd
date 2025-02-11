@@ -81,18 +81,15 @@ function Admin() {
             border: highContrast ? '3px solid white' : "2px solid #476758",
           }}
         >
-          <h2>Login</h2>
-          <span>
-            Ainda não tem login? <a href="#">Cadastre-se</a>
-          </span>
+          <h2>Login in to admin panel</h2>
 
           <div className="input">
-            <label htmlFor="email" style={{ fontWeight: "bold" }}>E-mail:</label>
+            <label htmlFor="email" style={{ fontWeight: "bold" }}>NIF:</label>
             <input
-              type="email"
-              id="email"
+              type="text"
+              id="text"
               name="email"
-              placeholder="user@email.com"
+              placeholder="000.000.-00"
               style={{
                 backgroundColor: highContrast ? "black" : "#8cc79f",
                 color: highContrast ? "white" : "white",

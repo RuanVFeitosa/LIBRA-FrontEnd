@@ -10,9 +10,9 @@ function LoginPage() {
   const [isChecked, setIsChecked] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
 
-  const[email, setEmail] = useState("");
-  const[password, setPassword] = useState("");
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
 
   const ToggleSwitch = ({ isChecked, onChange }) => (
     <label className="areaC"
@@ -47,17 +47,17 @@ function LoginPage() {
     setPassword(e.target.value);  // Atualiza o estado com o valor do input
   };
 
-  
-  
-  const handleSubmit =  async (e) =>{
+
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
+
     // Setando o useState do dataUser
     const dataUser = {
       email: email,
       password: password
     }
-    
+
 
 
     // Fazer a req para a api
@@ -65,16 +65,16 @@ function LoginPage() {
 
       // Fazendo a requisição para a API
       const response = await fetch("http://10.92.198.61:8080/auth/login", {
-        'body' : JSON.stringify(dataUser),
-        "method" : "POST",
-        "headers" : {"Content-Type" : "Application/json"}
+        'body': JSON.stringify(dataUser),
+        "method": "POST",
+        "headers": { "Content-Type": "Application/json" }
       })
-      
+
       // Convertendo o retorno para json
       const responseJson = await response.json();
 
       // Se a req tiver tido sucesso
-      if(responseJson.success){
+      if (responseJson.success) {
 
         // Limpar mensagem de erro
         setMsgErro("");
@@ -88,36 +88,36 @@ function LoginPage() {
 
         // Mensagem generica
         alert("Sendo encaminhado para a home...")
-      }else {
+      } else {
         console.log(responseJson);
 
-        if(responseJson.error){
+        if (responseJson.error) {
           return setMsgErro(responseJson.error.details[0].message);
         }
 
-        if(responseJson.errors){
+        if (responseJson.errors) {
           return setMsgErro(responseJson.errors[0].message);
         }
-        
+
         // console.log(responseJson.error.details[0].message)
 
       }
-      
+
     } catch (error) {
       console.log(error);
-      
+
     }
-    
+
     // 10.92.198.61
 
     console.log(dataUser);
 
-    
+
     // setAvisoLogiu('login realizado com sucesso!')
     // console.log("login realizado")
   }
 
-  
+
 
 
   const toggleContrast = () => {
@@ -243,7 +243,7 @@ function LoginPage() {
             Próximo
           </button>
 
-            <p>{msgErro}</p>
+          <p>{msgErro}</p>
         </form>
         {avisoLogin && <p>{avisoLogin}</p>}
       </div>
