@@ -1,9 +1,7 @@
-
 import React from 'react';
-import "../assets/css/Notif.css";
-import Sidebar from './Siderbar';
-
-function Notifc() {
+import './Notifi.css'; // Importação do CSS
+import Sidebar from './components/SideBar/Sidebar';
+function Notif() {
   return (
     <div className="lateral">
         <Sidebar/>
@@ -14,4 +12,4 @@ function Notifc() {
   );
 }
 
-export default Notifc;
+export default Notif;

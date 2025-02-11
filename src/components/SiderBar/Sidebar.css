@@ -1,0 +1,74 @@
+body {
+  color: black;
+}
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #9daf9e;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #000000;
+    display: block;
+    border-radius: 5px;
+}
+
+.sidebar ul li:hover {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.sidebar ul li.selected {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 300px;
+  font-weight: bold;
+}
+
+.Name {
+  display: flex;
+  padding-left: 50px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.perfil img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.perfil h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.perfil span {
+  font-size: 14px;
+  color: #000000;
+}

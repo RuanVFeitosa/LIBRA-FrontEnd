@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Login from './components/Login';
-import Admin from './components/Admin';
-import Notifc from './components/Notific';
+import Login from './pages/login/Login';
+import Admin from './pages/admin/Admin';
+import Notif from './pages/admin/Notifi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-    <Notifc/>
+    <Notif/>
   </Router>
 );
 
