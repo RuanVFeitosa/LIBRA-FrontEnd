@@ -6,18 +6,17 @@ import "../pages/login/Login.css";
 import axiosInstance from "../helper/axios.instance";
 
 export default function AuthLoginUser(props) {
-    
-    // UseState para mostrar senha
+  // UseState para mostrar senha
   const [showPassword, setShowPassword] = useState(false);
-    // Controlar checks
+  // Controlar checks
   const [isChecked, setIsChecked] = useState(false);
-    // Controllar o alto contraste
+  // Controllar o alto contraste
   const [highContrast, setHighContrast] = useState(props.highContrast);
 
   // Mudar o contraste com base o props vem
   useEffect(() => {
     setHighContrast(props.highContrast);
-  },[props.highContrast])
+  }, [props.highContrast]);
 
   // usesStates padrão do formulario
   const [email, setEmail] = useState("");
@@ -26,45 +25,46 @@ export default function AuthLoginUser(props) {
   const [avisoLogin, setAvisoLogiu] = useState(false);
 
   // Controlar mensagem de erro
-  const [msgErro, setMsgErro] = useState("");
-
+  const [msgErro, setMsgErro] = useState([]);
 
   // Alterar os inputs
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
   const handlePasswordChange = (e) => {
-    setPassword(e.target.value); 
+    setPassword(e.target.value);
   };
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
+      // Pegando os dados que o usuario colocou no form
+      const data = {
+        email: email,
+        password: password,
+      };
 
-        // Pegando os dados que o usuario colocou no form
-        const data = {
-            email : email,
-            password : password
-        }
+      // Fazendo a req na api
+      const response = await axiosInstance.post("auth/login", data);
 
-        // Fazendo a req na api
-        const response = await axiosInstance.post("auth/login",data );
+      // Se retornou sucesso , armazenar o token
+      if (response.data.success) {
+        await localStorage.setItem("token", response.data.data.token);
 
-        // Se retornou sucesso , armazenar o token
-        if(response.data.success){
-
-            await localStorage.setItem("token", response.data.data.token);
-
-            alert(localStorage.getItem("token"))
-        }
-        console.log(response.data);
-        
-
+        alert(localStorage.getItem("token"));
+      }
+      console.log(response.data);
     } catch (error) {
+      if (error.response.data.error) {
         console.log(error.response.data);
-        
+        return setMsgErro(error.response.data.error.details);
+      }
+
+      if (error.response.data.errors) {
+        console.log(error.response.data.errors);
+        return setMsgErro(error.response.data.errors);
+      }
     }
   };
 
@@ -77,7 +77,6 @@ export default function AuthLoginUser(props) {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
-
 
   return (
     <div className="Container-Form">
@@ -173,7 +172,9 @@ export default function AuthLoginUser(props) {
           Próximo
         </button>
 
-        <p>{msgErro}</p>
+        {msgErro.map((item) => (
+          <p>{item.message}</p>
+        ))}
       </form>
       {avisoLogin && <p>{avisoLogin}</p>}
     </div>
