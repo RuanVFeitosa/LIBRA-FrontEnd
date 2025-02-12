@@ -1,6 +1,87 @@
-.livros-cadastrados {
-    position: relative;
+.container-livros {
+    padding: 20px;
+  }
+  
+  .lista-livros {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+  
+  .livro {
+    flex: 0 0 auto;
+    width: 300px; /* Aumentei a largura para acomodar a imagem */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .conteudo-livro {
+    display: flex; /* Ativa o Flexbox para organizar imagem e texto */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 15px; /* Espaço entre a imagem e o texto */
+  }
+  
+  .imagem-livro {
+    width: 100px; /* Largura da imagem */
+    height: 150px; /* Altura da imagem */
+    border-radius: 8px; /* Borda arredondada na imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+  }
+
+  .livro-titulo {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .livro-autor {
+    font-size: 12px;
+    opacity: 50%;
+
+  }
+
+  .livro-ficha {
+    font-size: 13px;
+  }
+
+  .livro-categoria {
+    font-size: 13px;
+
+  }
+
+  .livro-avaliacao {
+    font-size: 13px;
+
+  }
+
+  .avaliacao-estrela {
+    color: #ffcc00; /* Cor das estrelas preenchidas */
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  .avaliacao-estrela .vazia {
+    color: #ccc; /* Cor das estrelas vazias */
+  }
+  
+  .info-livro {
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+  }
+  
+  .info-livro h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.2em;
+  }
+  
+  .info-livro p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .info-livro .avaliacao {
+    color: #ffcc00; /* Cor das estrelas */
+  }
