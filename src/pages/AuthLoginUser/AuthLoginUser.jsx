@@ -56,40 +56,68 @@ export default function AuthLoginUser() {
         </span>
 
         <div className="input">
-          <label htmlFor="email">E-mail:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-            value={email}
-            placeholder="user@email.com"
-          />
-        </div>
+  <label htmlFor="email" style={{ fontWeight: "bold" }}>
+    E-mail:
+  </label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    onChange={(e) => setEmail(e.target.value)}
+    value={email}
+    placeholder="user@email.com"
+    style={{
+      backgroundColor: highContrast ? "black" : "#8cc79f",
+      color: highContrast ? "white" : "white",
+      border: highContrast ? "3px solid white" : "none",
+    }}
+  />
+</div>
 
-        <div className="input">
-          <label htmlFor="campoSenha">Senha:</label>
-          <div className="password-container">
-            <input
-              type={showPassword ? "text" : "password"}
-              id="campoSenha"
-              name="campoSenha"
-              placeholder="******"
-              onChange={(e) => setPassword(e.target.value)}
-              value={password}
-            />
-            <div className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
-              {showPassword ? <LuEyeOff size={24} /> : <LuEye size={24} />}
-            </div>
-          </div>
-          <a >Esqueci minha senha</a>
-        </div>
+<div className="input">
+  <label htmlFor="campoSenha" style={{ fontWeight: "bold" }}>
+    Senha:
+  </label>
+  <div className="password-container" style={{ backgroundColor: highContrast ? "black" : "#8cc79f", border: highContrast ? "3px solid white" : "none" }}>
+    <input
+      type={showPassword ? "text" : "password"}
+      id="campoSenha"
+      name="campoSenha"
+      placeholder="******"
+      onChange={(e) => setPassword(e.target.value)}
+      value={password}
+      style={{
+        backgroundColor: "transparent", // para não sobrepor a cor de fundo do container
+        color: highContrast ? "white" : "white",
+        border: "none",
+        paddingLeft: "10px", // Ajuste de padding para ficar alinhado
+        width: "90%", // Ajustando a largura para o input não sobrepor
+      }}
+    />
+    <div className="password-toggle" onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer", color: highContrast ? "white" : "black" }}>
+      {showPassword ? <LuEyeOff size={24} /> : <LuEye size={24} />}
+    </div>
+  </div>
+  <a>Esqueci minha senha</a>
+</div>
 
-        <button type="submit" className="submit-button">Próximo</button>
+<button type="submit" className="submit-button" style={{
+  backgroundColor: highContrast ? "black" : "#2e3f37",
+  color: highContrast ? "white" : "white",
+  border: highContrast ? "3px solid white" : "none",
+  width: "100%",
+  borderRadius: "30px",
+  fontSize: "20px",
+  padding: "15px",
+  marginTop: "40px",
+}}>
+  Próximo
+</button>
 
-        {msgErro.map((item, index) => (
-          <p key={index} className="error-message">{item.message}</p>
-        ))}
+{msgErro.map((item, index) => (
+  <p key={index} className="error-message">{item.message}</p>
+))}
+
       </form>
       {avisoLogin && <p>{avisoLogin}</p>}
     </div>

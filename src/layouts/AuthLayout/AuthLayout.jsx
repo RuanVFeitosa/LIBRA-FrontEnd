@@ -20,9 +20,7 @@ function AuthLayout() {
   return (
     <div
       style={{
-        background: highContrast
-          ? "black"
-          : "linear-gradient(to right, #9daf9e, #627961)", 
+        background: highContrast ? "black" : "linear-gradient(to right, #9daf9e, #627961)",
         backgroundSize: "cover",
         minHeight: "100vh",
         display: "flex",

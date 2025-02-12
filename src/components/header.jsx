@@ -4,7 +4,7 @@ import "./header.css";
 export default function Header({ highContrast, toggleContrast }) {
   return (
     <div className="header">
-      <h1>LIBRA</h1>
+      <img src="/libra.png" alt="Libra" className="logo" />
       <div className="toggle-container">
         <label
           className="areaC"
@@ -28,7 +28,6 @@ export default function Header({ highContrast, toggleContrast }) {
           ></span>
         </label>
         <span className="contrast-text">Auto contraste</span>
-        
       </div>
     </div>
   );
