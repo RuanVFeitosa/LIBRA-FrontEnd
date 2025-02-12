@@ -15,11 +15,70 @@
     background: #efefef;
     padding: 15px 20px;
     border-radius: 20px 20px 0 0;
+}
 
+
+.container-pai{
+    background-color: #efefef;
+    border-radius: 20px 20px 20px 20px;
+    height: 870px;
 }
 
 .body{
     background-color: #efefef;
     height: 100px;
     margin: 30px;
+}
+
+#titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #efefef;
+    padding: 15px 20px;
+}
+
+
+.notif-container{
+    background-color: #b8b8b6;
+    margin: 20px;
+    padding: 2px 5px 5px 15px ;
+}
+
+.notif-container h2{
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-size: 20px;
+}
+
+.notif-container p{
+    margin: 5px;
+    font-size: 15px;
+}
+
+.nivel{
+    font-weight: bold;
+    font-size:15px;
+    margin: 20px 20px 5px 20px;
+}
+.nivel p {
+    background-color:#d6d6d4 ;
+    padding: 10px;
+}
+
+img{
+height: 50px;
+width: 50px;
+}
+
+#ExU{
+    background-color: red;
+}
+
+#ExA{
+    background-color: yellow;
+}
+
+#ExS{
+    background-color: green;
 }

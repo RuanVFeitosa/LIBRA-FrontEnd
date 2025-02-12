@@ -33,15 +33,15 @@ body {
 }
 
 .sidebar ul li:hover {
-  background-color: #ffffff;
+  background-color: #efefef;
   border-radius: 20px;
   width: 300px;
 }
 
 .sidebar ul li.selected {
-  background-color: #ffffff;
+  background-color: #efefef;
   border-radius: 20px;
-  width: 300px;
+  width: 400px;
   font-weight: bold;
 }
 
