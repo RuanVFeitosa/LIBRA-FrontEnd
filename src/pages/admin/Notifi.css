@@ -13,14 +13,17 @@
     justify-content: space-between;
     align-items: center;
     background: #efefef;
-    padding: 15px 20px;
-    border-radius: 20px 20px 0 0;
+    padding: 0px 20px;
+    border-radius: 40px 40px 0 0;
 }
 
+.navBar h2{
+    font-size: 32px;
+}
 
 .container-pai{
     background-color: #efefef;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 40px 40px 40px 40px;
     height: 870px;
 }
 
@@ -72,13 +75,24 @@ width: 50px;
 }
 
 #ExU{
-    background-color: red;
+    background-color: #b92922;
+    color: white;
+    height: 30px;
+    width: 30px;
 }
 
 #ExA{
-    background-color: yellow;
+    background-color: #de8b1c;
+    color: white;
+    height: 30px;
+    width: 30px;
+
 }
 
 #ExS{
-    background-color: green;
+    background-color: #3bab64;
+    color: white;
+    height: 30px;
+    width: 30px;
+    float: left;
 }

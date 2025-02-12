@@ -37,6 +37,12 @@ function Notif() {
                 <p>Evento: Sarau Cultural</p>
                 <p>Necessidade especial: Deficiência visual</p>
                 <p>Data: 18/10/2025</p>
+
+                <AiOutlineExclamationCircle id='ExU' style={{
+                    width:'40px',
+                    height:'40',
+                    color:'white'
+                }} />
                 </div>
 
                 
