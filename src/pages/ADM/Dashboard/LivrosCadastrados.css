@@ -1,0 +1,6 @@
+.livros-cadastrados {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}

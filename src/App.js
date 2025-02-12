@@ -30,7 +30,7 @@ function App() {
 
           {/* Layout de Administração */}
           <Route path='/adm' element={<AdminPage />}>
-            <Route element={<Dashboard />} />
+            <Route path='' element={<Dashboard />} />
             <Route path="eventos" element={<Eventos />} />
           </Route>
         </Routes>

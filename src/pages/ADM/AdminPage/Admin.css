@@ -2,17 +2,15 @@
     background-color: #75846c;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
-    height: auto;
   }
   
   .admin-content {
-    flex-grow: 1;
-    padding: 50px;
-    margin: 20px;
+    flex-grow: 3;
+    padding: 30px;
+    margin: 10px;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     background-color: white;
-    border-radius: 30px;
+    border-radius: 50px;
   }
   

@@ -1,22 +1,32 @@
 .calendario {
-    text-align: center;
-  }
-  
-  .dias {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-  }
-  
-  .dia {
-    background: #75846c;
-    color: white;
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  
-  .dia:hover {
-    background: #5c6f56;
-  }
-  
+  text-align: center;
+}
+
+.dias {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dia {
+  background: #75846c;
+  color: white;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dia.selected {
+  background-color: #007bff;
+  /* Cor de fundo azul */
+  color: white;
+  /* Texto branco */
+  border-radius: 50%;
+  /* Torna o dia selecionado circular */
+  border: 2px solid #0056b3;
+  /* Borda mais escura */
+}
+
+.dia:hover {
+  background: #5c6f56;
+}

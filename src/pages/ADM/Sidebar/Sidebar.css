@@ -1,7 +1,7 @@
 .sidebar {
   width: 250px;
   background-color: #75846c;
-  height: 100vh;
+  height: 95vh;
   padding-top: 20px;
   padding-left: 30px;
 }
@@ -79,11 +79,12 @@
 
 .sidebar a {
   color: white;
+  width: 300px;
   text-decoration: none;
   padding: 10px;
   display: block;
   border-radius: 5px;
-  transition: background 0.3s;
+  transition: background 0.2s;
 }
 
 .sidebar a:hover {
@@ -91,4 +92,5 @@
   color: black;
   border-radius: 20px;
   width: 300px;
+  transition: 0.2s ease-in-out;
 }

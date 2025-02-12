@@ -1,9 +1,11 @@
 import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import { NavLink } from 'react-router-dom';
-import mulher from '../../../assets/mulher.jpg'
+import mulher from '../../../assets/mulher.jpg';
 
 const Sidebar = () => {
+    const location = useLocation();
+
     const navList = [
         { name: 'Dashboard', path: '/adm', icon: '▦' },
         { name: 'Acervo', path: '/adm/livros', icon: '📚' },
@@ -26,19 +28,21 @@ const Sidebar = () => {
                 </div>
 
                 {/* Mapeamento dos itens da lista */}
-                {navList.map((item) => (
-                    <li key={item.name}>
-                        <NavLink
-                            to={item.path}
-                            className={({ isActive }) => 
-                                isActive ? "sidebar-link active" : "sidebar-link"
-                            }
-                        >
-                            <span className="icon">{item.icon}</span>
-                            {item.name}
-                        </NavLink>
-                    </li>
-                ))}
+                {navList.map((item) => {
+                    const isActive = location.pathname === item.path; // Corrigido
+
+                    return (
+                        <li key={item.name}>
+                            <NavLink
+                                to={item.path}
+                                className={isActive ? "sidebar-link active" : "sidebar-link"}
+                            >
+                                <span className="icon">{item.icon}</span>
+                                {item.name}
+                            </NavLink>
+                        </li>
+                    );
+                })}
             </ul>
         </div>
     );

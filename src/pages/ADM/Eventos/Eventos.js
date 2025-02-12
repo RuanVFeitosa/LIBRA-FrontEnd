@@ -28,13 +28,25 @@ const Eventos = () => {
     alert("Evento cadastrado com sucesso!");
   };
 
+  // Converter a string da data para um objeto Date (sem fuso horário)
+  const selectedDate = evento.data
+    ? new Date(
+        new Date(evento.data).getFullYear(),
+        new Date(evento.data).getMonth(),
+        new Date(evento.data).getDate()
+      )
+    : new Date();
+
   return (
     <div className="eventos-background">
+      <div className='navBar'>
+        <h2>Bom dia, <b>Samantha!</b></h2>
+        <p>Voce tem 1 notificação</p>
+        <p>icone de saida</p>
+      </div>
       <div className="eventos-container">
         <div className="calendario-section">
-          <h2>Bom dia, <b>Samantha!</b></h2>
-          <p>Você tem 1 notificação</p>
-          <Calendario />
+          <Calendario selectedDate={selectedDate} />
           <div className="eventos-dia">
             <h3>Eventos do dia</h3>
             <div className="evento">
@@ -80,7 +92,6 @@ const Eventos = () => {
         </div>
       </div>
     </div>
-
   );
 };
 
