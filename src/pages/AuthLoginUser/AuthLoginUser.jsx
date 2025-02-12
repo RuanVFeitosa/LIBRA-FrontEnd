@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useOutletContext } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 // import "../layout/authLayout/LoginPage.css";
-// import axiosInstance from "../helper/axios.instance";
+import axiosInstance from "../../helper/AxiosInstance";
 
 export default function AuthLoginUser() {
   // UseState para mostrar senha
@@ -14,7 +14,6 @@ export default function AuthLoginUser() {
   // Controllar o alto contraste
   const outletContext = useOutletContext();
   const [highContrast, setHighContrast] = useState(outletContext.highContrast);
-
 
   // Mudar o contraste com base o useOutletContext vem
   useEffect(() => {
@@ -38,38 +37,43 @@ export default function AuthLoginUser() {
     setPassword(e.target.value);
   };
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   try {
-  //     // Pegando os dados que o usuario colocou no form
-  //     const data = {
-  //       email: email,
-  //       password: password,
-  //     };
+    try {
+      // Pegando os dados que o usuario colocou no form
+      const data = {
+        email: email,
+        password: password,
+      };
 
-  //     // Fazendo a req na api
-  //     const response = await axiosInstance.post("auth/login", data);
+      // Fazendo a req na api
+      const response = await axiosInstance.post("auth/login", data);
 
-  //     // Se retornou sucesso , armazenar o token
-  //     if (response.data.success) {
-  //       await localStorage.setItem("token", response.data.data.token);
+      // Se retornou sucesso , armazenar o token
+      if (response.data.success) {
+        await localStorage.setItem("token", response.data.data.token);
 
-  //       alert(localStorage.getItem("token"));
-  //     }
-  //     console.log(response.data);
-  //   } catch (error) {
-  //     if (error.response.data.error) {
-  //       console.log(error.response.data);
-  //       return setMsgErro(error.response.data.error.details);
-  //     }
+        alert(localStorage.getItem("token"));
+      }
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+      if (error.name === "AxiosError") {
+        return alert("Erro, provavelmente o back esta off");
+      }
 
-  //     if (error.response.data.errors) {
-  //       console.log(error.response.data.errors);
-  //       return setMsgErro(error.response.data.errors);
-  //     }
-  //   }
-  // };
+      if (error.response.data.error) {
+        console.log(error.response.data);
+        return setMsgErro(error.response.data.error.details);
+      }
+
+      if (error.response.data.errors) {
+        console.log(error.response.data.errors);
+        return setMsgErro(error.response.data.errors);
+      }
+    }
+  };
 
   // Controlar o contraste
   const toggleContrast = () => {
@@ -84,7 +88,7 @@ export default function AuthLoginUser() {
   return (
     <div className="Container-Form">
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className="Login-Form"
         style={{
           backgroundColor: highContrast ? "#000000" : "#4e6e5f",
@@ -93,7 +97,8 @@ export default function AuthLoginUser() {
       >
         <h2>Login</h2>
         <span>
-          Ainda não tem login?  <Link to={"/auth/register"}>Faça o cadastro</Link>
+          Ainda não tem login?{" "}
+          <Link to={"/auth/register"}>Faça o cadastro</Link>
         </span>
 
         <div className="input">
