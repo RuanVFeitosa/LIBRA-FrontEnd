@@ -1,0 +1,53 @@
+.header {
+    padding-top: 20px;
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .contrast-text {
+    font-size: 13px;
+    color: white;
+  }
+  
+  .areaC {
+    background-color: #3b5147;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 1rem;
+    border: 3px solid #3b5147;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .buttonContraste {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.25ms;
+  }
+  
+  .buttonContraste:checked + span {
+    left: 55%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .bolinha {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    left: 5%;
+    cursor: pointer;
+  }
+  
