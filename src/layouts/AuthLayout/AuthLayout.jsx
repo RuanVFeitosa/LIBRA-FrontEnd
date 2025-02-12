@@ -1,16 +1,26 @@
 import React, { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Navigate, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 import "./LoginPage.css";
 // import AuthLoginUser from "../../features/AuthLoginUser.jsx";
 
 function AuthLayout() {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(location.pathname);
+
+    if (location.pathname === "/auth" || location.pathname === "/auth/") {
+      console.log(location.pathname);
+
+      navigate("/auth/login", { replace: true });
+    }
+  }, [location.pathname, navigate]);
+
   const [showPassword, setShowPassword] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
   const [highContrast, setHighContrast] = useState(false);
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const ToggleSwitch = ({ isChecked, onChange }) => (
     <label
@@ -50,8 +60,6 @@ function AuthLayout() {
     setIsChecked(e.target.checked);
   };
 
-  const navigate = useNavigate();
-
   return (
     <div
       style={{
@@ -64,7 +72,7 @@ function AuthLayout() {
         position: "relative",
       }}
     >
-      <div className="header">
+      {/* <div className="header">
         <h1>LIBRA</h1>
         <div>
           <ToggleSwitch
@@ -75,8 +83,8 @@ function AuthLayout() {
             Auto contraste
           </a>
         </div>
-      </div>
-      <Outlet context={{highContrast}} />
+      </div> */}
+      <Outlet context={{ highContrast }} />
     </div>
   );
 }
