@@ -75,9 +75,7 @@ export default function AuthLoginUser() {
 </div>
 
 <div className="input">
-  <label htmlFor="campoSenha" style={{ fontWeight: "bold" }}>
-    Senha:
-  </label>
+  <label htmlFor="campoSenha" style={{ fontWeight: "bold" }}>Senha: </label>
   <div className="password-container" style={{ backgroundColor: highContrast ? "black" : "#8cc79f", border: highContrast ? "3px solid white" : "none" }}>
     <input
       type={showPassword ? "text" : "password"}
@@ -87,15 +85,15 @@ export default function AuthLoginUser() {
       onChange={(e) => setPassword(e.target.value)}
       value={password}
       style={{
-        backgroundColor: "transparent", // para não sobrepor a cor de fundo do container
+        backgroundColor: "transparent", 
         color: highContrast ? "white" : "white",
         border: "none",
-        paddingLeft: "10px", // Ajuste de padding para ficar alinhado
-        width: "90%", // Ajustando a largura para o input não sobrepor
+        paddingLeft: "10px", 
+        width: "90%", 
       }}
     />
-    <div className="password-toggle" onClick={() => setShowPassword(!showPassword)} style={{ cursor: "pointer", color: highContrast ? "white" : "black" }}>
-      {showPassword ? <LuEyeOff size={24} /> : <LuEye size={24} />}
+    <div className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
+              {showPassword ? <LuEyeOff size={24} /> : <LuEye size={24} />}
     </div>
   </div>
   <a>Esqueci minha senha</a>

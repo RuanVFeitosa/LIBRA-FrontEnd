@@ -4,7 +4,7 @@ import "./header.css";
 export default function Header({ highContrast, toggleContrast }) {
   return (
     <div className="header">
-      <img src="/libra.png" alt="Libra" className="logo" />
+      <img src= "../assets/images/LibraLogo.png" alt="Libra" className="logo" />
       <div className="toggle-container">
         <label
           className="areaC"
