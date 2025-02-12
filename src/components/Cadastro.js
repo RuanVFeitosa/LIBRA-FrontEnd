@@ -7,7 +7,6 @@ import libras from "../assets/libra.png";
 import VLibras from "@djpfs/react-vlibras";
 
 function Cadastro() {
-
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");

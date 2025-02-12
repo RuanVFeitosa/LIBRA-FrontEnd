@@ -10,7 +10,7 @@ import Notif from './pages/admin/Notifi';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
-    <Login/>
+    <Notif/>
   </Router>
 );
 

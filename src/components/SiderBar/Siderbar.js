@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Sidebar.css'; // Importação do CSS
 import { NavLink } from 'react-router-dom';
 

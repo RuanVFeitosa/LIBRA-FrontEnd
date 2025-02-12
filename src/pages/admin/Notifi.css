@@ -1,4 +1,4 @@
-.Div-form{
+.background{
     flex-grow: 1;
     padding: 20px;
     background-color: #627961;
@@ -6,4 +6,20 @@
 
 .lateral{
     display: flex;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #efefef;
+    padding: 15px 20px;
+    border-radius: 20px 20px 0 0;
+
+}
+
+.body{
+    background-color: #efefef;
+    height: 100px;
+    margin: 30px;
 }
