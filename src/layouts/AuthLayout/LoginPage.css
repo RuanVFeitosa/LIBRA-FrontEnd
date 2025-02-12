@@ -1,0 +1,187 @@
+/*TOPO DA PAGINA*/
+ * {
+  margin: 0;
+  padding: 0;
+ }
+.header button {
+    border-radius: 10px;
+    border: none;
+    background: none;
+  }
+  .header a {
+    color: white;
+  }
+  .Container-Form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  
+  .Container-Form h2 {
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .Container-Form span {
+    text-align: center;
+  }
+  .header {
+    padding-top: 20px;
+    width: 98%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  
+  /*AREA DO FORM*/
+  
+  .Login-Form {
+    background-color: #4e6e5f;
+    height: 643.5;
+    width: 450px;
+    border: 2px solid (#476758);
+    border-radius: 50px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .Login-Form span {
+    text-align: center;
+    color: white;
+    width: 100%;
+  }
+  span a {
+    color: white;
+    font-weight: bold;
+    align-items: flex-end;
+  }
+  
+  .Login-Form button {
+    color: white;
+    background-color: #2e3f37;
+    border: none;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
+  /*AREA QUE ENTRA OS DADOS*/
+  .input {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    margin: 50px auto;
+    text-align: center;
+    margin-bottom: 90px;
+  }
+  .input label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  .input input {
+    width: 95%;
+    text-align: left;
+    border-radius: 20px;
+    background-color: #8cc79f;
+    border: none;
+    color: white;
+    padding: 15px;
+    opacity: 0.8;
+    font-size: 18px;
+  }
+  .input input:focus {
+    opacity: 1.5;
+  }
+  
+  .input label {
+    text-align: left;
+    margin-left: 15px;
+    color: white;
+  }
+  
+  input::-webkit-input-placeholder {
+    color: white;
+  }
+  
+  .input a {
+    display: flex;
+    justify-content: end;
+    color: white;
+    margin-top: 5px;
+    padding-top: 5px;
+  }
+  .input a {
+    text-decoration: none;
+  }
+  
+  /*FUNÇÔES DA PAGINA*/
+  
+  .areaC {
+    background-color: #3b5147;
+    width: 5rem;
+    height: 2rem;
+    display: flex;
+    border-radius: 1rem;
+    border: 3px solid #3b5147;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .buttonContraste {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.25ms;
+  }
+  
+  .buttonContraste:checked + span {
+    left: 55%;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .bolinha {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    left: 5%;
+    cursor: pointer;
+  }
+  
+  .senha {
+    margin: 0px;
+    width: 0px;
+  }
+  
+  .password-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #8cc79f;
+    text-align: left;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    opacity: 0.8;
+    font-size: 18px;
+  }
+  
+  .password-container input[type="password"] {
+    padding-left: 10px;
+    width: 90%;
+    border: none;
+  }
+  
+  .password-container input[type="checkbox"] {
+    width: 13px;
+    padding-left: 10px;
+  }

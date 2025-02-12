@@ -1,0 +1,144 @@
+.circle {
+    position: absolute;
+    top: -200px; /* Ajusta a posição para esconder metade do círculo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px; /* Tamanho fixo para manter a proporção */
+    height: 220px; /* Mesmo valor da largura para manter o formato circular */
+    background-color: #2E463A; /* Cor do círculo (se precisar) */
+    border-radius: 50%; /* Mantém o formato circular */
+    z-index: 10; /* Garante que o círculo fique sobre os outros elementos */
+    overflow: hidden; /* Esconde a parte superior caso necessário */
+}
+
+.container-acc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    gap: 20px;
+}
+
+/*---------------------------------------------------------------- Formulário ----------------------------------*/
+
+.formulario-container {
+    width: 700px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #5a796a;
+    border-radius: 30px;
+    color: white;
+    padding: 30px;
+}
+
+.form-acc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.text {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.options-text {
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.checkbox-options {
+    color: white;
+    display: flex;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #476758;
+    gap: 10px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.checkbox-options label {
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.checkbox-options input[type="checkbox"] {
+    display: none;
+    /* Esconde a checkbox padrão */
+}
+
+.custom-options {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.checkbox-options input[type="checkbox"]:checked + .custom-options {
+    background-color: white;
+    border: 2px solid white;
+}
+
+.custom-textarea {
+    width: 95%;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+    resize: none;
+    transition: 0.3s ease-in-out;
+}
+
+.text-acc {
+    font-size: 15px;
+}
+
+/*---------------------------------------------------------------- Botão  ----------------------------------*/
+.botao-acc button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao-acc {
+    border: 1px solid #3b5147;
+    width: 50%;
+    background-color: #3b5147;
+    color: white;
+    padding: 10px;
+
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-acc:hover {
+    background-color: #8cc79f;
+    border: 1px solid #8cc79f;
+}

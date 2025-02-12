@@ -1,0 +1,320 @@
+body {
+    /* background: url('../fundo.png'); */
+    background-size: cover;
+}
+
+.libras {
+    position: relative;
+    width: 100px;
+    float: right;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+
+.wrapper {
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    gap: 20px;
+}
+
+/*---------------------------------------------------- Formulario --------------------------------*/
+.formulario {
+    width: 500px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #476758;
+    border-radius: 30px;
+    color: white;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0;
+    font-size: 30px;
+}
+
+.cadastro {
+    margin-bottom: 0;
+}
+
+.login {
+    margin-bottom: 0;
+    font-size: 12px;
+
+}
+
+.login-link {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-link:hover {
+    transition: 0.3s ease-in-out;
+    text-decoration: underline;
+
+}
+
+.form {
+    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.form input {
+    width: 80%;
+    padding: 8px;
+    margin: 5px;
+    border: none;
+    background-color: #8cc79f;
+    color: white;
+    border-radius: 15px;
+}
+
+.form label {
+    font-weight: bold;
+    width: 80%;
+    margin: 5px;
+    border: none;
+    color: white;
+}
+
+.formulario input::placeholder {
+    color: #cfe8d1;
+}
+
+.dica-senha {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: row;
+    /* font-weight: bold; */
+
+    width: 80%;
+    margin: 5px;
+    border: none;
+    color: white;
+
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Botão */
+.botao {
+    border: 1px solid #3b5147;
+    width: 50%;
+    background-color: #3b5147;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #8cc79f;
+    border: 1px solid #8cc79f;
+}
+
+/* --------------------------------------------- Seção de Acessibilidade ------------------------------- */
+.acessibilidade-caixa {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acessibilidade {
+    /* flex: 1; */
+    width: 350px;
+    height: 315.4px;
+    background-color: #476758;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    position: relative;
+}
+
+.cmd1 {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #3b5147;
+    /* border: 1px solid white; */
+}
+
+.cmd2 {
+    border-radius: 20px;
+    padding: 2px;
+    border: 2px solid white;
+    background-color: #3b5147;
+}
+
+.exclamacao {
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: none;
+}
+
+.mascote-nome {
+    font-weight: bold;
+}
+
+.plataforma {
+    font-weight: bold;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none;
+    /* Esconde a checkbox padrão */
+}
+
+.checkbox-cmd1 {
+    background-color: white;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    display: none; /* Esconde a checkbox padrão */
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; /* Torna redondo */
+    border: 2px solid #fff; /* Cor da borda */
+    background-color: transparent;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.checkbox input[type="checkbox"]:checked + .custom-checkbox {
+    background-color: white; /* Cor quando marcado */
+    border: 2px solid white; /* Mantém borda da cor */
+}
+
+.mascote {
+    position: relative;
+    display: flex;
+    width: 400px;
+    bottom: 10px;
+
+}
+
+/* ---------------------------------------------- Responsividade --------------------------------------*/
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .acessibilidade {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 10px;
+    }
+    
+    .wrapper {
+        gap: 10px;
+    }
+
+    .formulario {
+        width: 100%;
+    }
+
+    .form input {
+        width: 100%;
+    }
+
+    .botao {
+        width: 100%;
+    }
+
+    .acessibilidade {
+        width: 100%;
+    }
+
+    /* .mascote{} */
+}
+
+@media screen and (max-width: 480px) {
+    .title h2 {
+        font-size: 24px;
+    }
+
+    .login {
+        font-size: 10px;
+    }
+
+    .form label {
+        font-size: 14px;
+    }
+
+    .form input {
+        font-size: 14px;
+    }
+
+    .dica-senha {
+        font-size: 10px;
+    }
+
+    .botao {
+        font-size: 14px;
+    }
+
+    .acessibilidade {
+        height: auto;
+        padding: 15px;
+    }
+
+    .mascote {
+        width: 220px;
+    }
+}
