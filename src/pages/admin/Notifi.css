@@ -1,11 +1,11 @@
 .background{
     flex-grow: 1;
-    padding: 20px;
     background-color: #627961;
 }
 
 .lateral{
     display: flex;
+    height: 100%;
 }
 
 .navBar{
@@ -14,7 +14,8 @@
     align-items: center;
     background: #efefef;
     padding: 0px 20px;
-    border-radius: 40px 40px 0 0;
+    border-radius: 60px;
+    margin-top: 40px;
 }
 
 .navBar h2{
@@ -23,76 +24,45 @@
 
 .container-pai{
     background-color: #efefef;
-    border-radius: 40px 40px 40px 40px;
-    height: 870px;
+    border-radius: 60px;
+    height: 1400px;
+    padding: 0px 20px;
 }
 
-.body{
-    background-color: #efefef;
-    height: 100px;
-    margin: 30px;
-}
-
-#titulo{
+.notif-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #efefef;
-    padding: 15px 20px;
-}
-
-
-.notif-container{
-    background-color: #b8b8b6;
-    margin: 20px;
-    padding: 2px 5px 5px 15px ;
-}
-
-.notif-container h2{
-    margin-top: 3px;
-    margin-bottom: 2px;
-    font-size: 20px;
-}
-
-.notif-container p{
-    margin: 5px;
-    font-size: 15px;
-}
-
-.nivel{
-    font-weight: bold;
-    font-size:15px;
-    margin: 20px 20px 5px 20px;
-}
-.nivel p {
-    background-color:#d6d6d4 ;
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Espaço entre o conteúdo e o ícone */
+    margin-bottom: 10px; /* Espaçamento entre as notificações */
     padding: 10px;
 }
 
-img{
-height: 50px;
-width: 50px;
+.notifc-content {
+    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+    background-color: #b8b8b6;
 }
 
-#ExU{
-    background-color: #b92922;
-    color: white;
-    height: 30px;
-    width: 30px;
+.notif-nivel {
+    
+    display: flex;
+    align-items: center; /* Alinha o ícone com o texto */
+    margin-left: 10px; /* Espaçamento entre o conteúdo e o ícone */
 }
 
-#ExA{
-    background-color: #de8b1c;
-    color: white;
-    height: 30px;
-    width: 30px;
-
+.icon-container-right {
+    display: flex;
+    align-items: center; /* Alinha o ícone com o texto */
 }
 
-#ExS{
-    background-color: #3bab64;
-    color: white;
-    height: 30px;
-    width: 30px;
-    float: left;
+.nivel p {
+    background-color: #b8b8b6;
+    display: flex;
+    align-items: center; /* Alinha o ícone com o texto */
+    margin: 5px 0;
+    
+}
+
+#ExU, #ExA, #ExS {
+    font-size: 30px;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }

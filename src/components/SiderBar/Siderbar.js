@@ -21,7 +21,8 @@ const Sidebar = () => {
     ];
 
     return (
-        <div className="sidebar">
+        <container className='atras'>
+            <div className="sidebar">
             <ul>
                 {/* Seção do perfil */}
                 <div className='perfil'>
@@ -49,6 +50,8 @@ const Sidebar = () => {
                 ))}
             </ul>
         </div>
+        </container>
+        
     );
 };
 
