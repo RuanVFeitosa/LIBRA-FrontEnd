@@ -1,68 +1,101 @@
-.background{
-    flex-grow: 1;
-    background-color: #627961;
+.background {
+  flex-grow: 1;
+}
+body {
+  background-color: #9daf9e;
+}
+.lateral {
+  display: flex;
+  height: 100%;
 }
 
-.lateral{
-    display: flex;
-    height: 100%;
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #efefef;
+  padding: 0px 20px;
+  border-radius: 60px;
+  margin-top: 40px;
 }
 
-.navBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #efefef;
-    padding: 0px 20px;
-    border-radius: 60px;
-    margin-top: 40px;
+.navBar h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+.navBar p{
+    font-size: 20px;
 }
 
-.navBar h2{
-    font-size: 32px;
-}
-
-.container-pai{
-    background-color: #efefef;
-    border-radius: 60px;
-    height: 1400px;
-    padding: 0px 20px;
+.container-pai {
+  background-color: #efefef;
+  border-radius: 60px;
+  height: 100%;
+  padding: 0px 20px;
 }
 
 .notif-container {
-    display: flex;
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: space-between; /* Espaço entre o conteúdo e o ícone */
-    margin-bottom: 10px; /* Espaçamento entre as notificações */
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px; /* Espaçamento entre as notificações */
+  padding: 10px;
 }
 
 .notifc-content {
-    flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
-    background-color: #b8b8b6;
+  flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+  padding: 10px;
+  font-size: 18px;
+  background-color: #b8b8b6;
+  border-radius: 10px;
+  width: 100%;
+}
+.notifc-content p,
+h2 {
+  margin-left: 10px;
 }
 
 .notif-nivel {
-    
-    display: flex;
-    align-items: center; /* Alinha o ícone com o texto */
-    margin-left: 10px; /* Espaçamento entre o conteúdo e o ícone */
+  color: rgb(255, 255, 255);
+  float: right;
+}
+.icon {
+  margin: 0px;
+  padding: 0px;
+  font-size: 80px;
 }
 
-.icon-container-right {
-    display: flex;
-    align-items: center; /* Alinha o ícone com o texto */
+.nivel {
+  margin: 10px;
 }
 
 .nivel p {
-    background-color: #b8b8b6;
-    display: flex;
-    align-items: center; /* Alinha o ícone com o texto */
-    margin: 5px 0;
-    
+  background-color: #d6d6d4;
+  display: flex;
+  align-items: center; /* Alinha o ícone com o texto */
+  margin: 5px 0 15px 0px;
+  padding: 5px;
+  height: 50px;
+  font-weight: bold;
 }
 
-#ExU, #ExA, #ExS {
-    font-size: 30px;
-    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+#ExU,
+#ExA,
+#ExS {
+  margin: 10px;
+}
+
+#ExU {
+  color: white;
+  background-color: #b92922;
+}
+
+#ExA {
+  color: white;
+  background-color: #de8b1c;
+}
+
+#ExS {
+  color: white;
+  background-color: #3bab64;
 }
